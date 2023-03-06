@@ -1,17 +1,21 @@
 class MovingObject{
 
     constructor(properties){
-        this.properties = properties;    
+        this.pos = properties.pos;
+        this.vel = properties.vel;
+        this.radius = properties.radius;
+        this.color = properties.color;    
     }
 
     draw(ctx) {
-        ctx.fillStyle = this.properties[color];
+        ctx.fillStyle = this.color;
         ctx.beginPath();
 
         ctx.arc(
-            this.properties[pos][0],
-            this.properties[pos][1],
-            this.properties[radius],
+            this.pos[0],
+            this.pos[1],
+            this.radius,
+            0,
             2 * Math.PI
             // false
         );
