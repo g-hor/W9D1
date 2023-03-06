@@ -7,8 +7,8 @@ class MovingObject{
         this.color = properties.color;    
     }
 
-    draw(ctx, color = this.color) {
-        ctx.fillStyle = color;
+    draw(ctx) {
+        ctx.fillStyle = this.color;
         ctx.beginPath();
 
         ctx.arc(
@@ -24,10 +24,8 @@ class MovingObject{
     }
 
     move(ctx){
-        this.draw(ctx, "#FFFFFF");
         this.pos[0] += this.vel[0];
         this.pos[1] += this.vel[1];
-        this.draw(ctx);
     }
 
 }

@@ -19,6 +19,7 @@ document.addEventListener("DOMContentLoaded", function() {
     mo.draw(ctx);
     mo.move(ctx);
     mo.move(ctx);
+    mo.move(ctx);
 
 
     const a = new Asteroid({pos: [69, 420]});
